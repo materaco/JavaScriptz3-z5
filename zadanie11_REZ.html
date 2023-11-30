@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function okno_zamknij_Rezmer()
+                {
+                window.close()
+                }
+        </script>
+    </head>
+    <body>
+        <font style="color: green; font-size: 31px;">
+            <script>
+                var D1_REZ = parseInt(prompt("Podaj pierwszy dzień: "));
+                var D2_REZ = parseInt(prompt("Podaj drugi dzień: "));
+                if (D1_REZ < 1 || D1_REZ > 31 || D2_REZ > D1_REZ || D2_REZ > 31) {
+                    alert("Podane dni są niepoprawne.");
+                }else{
+                    var roznica = Math.abs((D2_REZ - D1_REZ) * 86400);
+                }
+                document.write("Różnica między tymi dniami wynosi: ", roznica, " sekund");
+            </script>
+        </font>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rezmer()"/>
+    </body>
+</html>

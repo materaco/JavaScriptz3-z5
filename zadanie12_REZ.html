@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function okno_zamknij_Rezmer()
+                {
+                window.close()
+                }
+        </script>
+    </head>
+    <body>
+        <font style="color: green; font-size: 31px;">
+            <script>
+                var D1_REZ = parseInt(prompt("Podaj pierwszy dzień: "));
+                var D2_REZ = parseInt(prompt("Podaj drugi dzień: "));
+                var G1_REZ = parseInt(prompt("Podaj pierwszą godzine: "));
+                var G2_REZ = parseInt(prompt("Podaj drugą godzine: "));
+                if (D1_REZ < 1 || D1_REZ > 31 || D2_REZ > D1_REZ || D2_REZ > 31) {
+                    if (G1_REZ < 1 || G1_REZ > 24 || G2_REZ < 1 || G2_REZ > 24) {
+                    alert("Podane dni są niepoprawne.");
+                }}else{
+                    var roznicaD = Math.abs((D2_REZ - D1_REZ) * 86400);
+                    var roznicaG = Math.abs((G2_REZ - G1_REZ) * 3600);
+                    suma=roznicaD-roznicaG;
+                    }
+                document.write("Różnica między tymi dniami i godzinami wynosi: ", suma, " sekund");
+            </script>
+        </font>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rezmeri()"/>
+    </body>
+</html>
