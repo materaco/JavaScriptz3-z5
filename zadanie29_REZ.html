@@ -10,61 +10,93 @@
         </script>
     </head>
     <body>
-        <ul>
-            <h1><li>Rodzaje "filozofii" programowania:</li></h1>
-                <ol>
-                    <li>Programowanie strukturalne</li>
-                    <li>Programowanie obiektowe</li>
-                </ol>
-            <h1><li>Opisz paradygmat programowania strukturalnego. Założenia programowania strukturalnego:</li></h1>
-                Paradygmat programowania opierający się na podziale kodu źródłowego programu na procedury i hierarchicznie ułożone bloki z wykorzystaniem struktur kontrolnych w postaci instrukcji wyboru i pętli.
-                Programowanie strukturalne zwiększa czytelność i ułatwia analizę programów, co stanowi znaczącą poprawę w stosunku do trudnego w utrzymaniu „spaghetti code” często wynikającego z użycia instrukcji goto.
-            <br><br>
-            Założenia:<br>
-            <ol>
-                <li>Podzielone bloki kodu mają jeden punkt wejścia (mogą mieć wiele punktów wyjścia)</li>
-                <li>Wykonywanie wyrażeń w określonej kolejności</li>
-                <li>Używanie instrukcji warunkowych (if, if else)</li>
-                <li>Używanie pętli (for, while, do while)</li>
-                <li>Unikanie instrukcji skoku (goto)</li>
-                <li>Unikanie instrukcji break, continua</li>
-                <li>W programowaniu proceduralnym (strukturalne) funkcje i zmienne opisujące dany przedmiot nie są ze sobą powiązane.</li>
-            </ol>
-            <h1><li>Programowanie obiektowe: definicja (angielski skrót, obiekty, stan, zachowanie, końcowa konkluzja czym jest programowanie obiektowe).</li></h1>
-                Programowanie obiektowe (ang. object-oriented programming) — sposób programowania, w którym programy definiuje się za pomocą:<br>
+        <ol>
+            <h1><li>W jaki sposób można określić właściwość danego obiektu ( dwa sposoby wraz z przykładami)?</li></h1>
+                <b>Sposób 1:</b><br>
+                    a) nazwa_obiektu.nazwa_właściwości="tekst"; -> dla właściwości typu tekstowego<br>
+                    np. <br>
+                    auto.marka="Opel Omega";<br><br>
+
+                    b) nazwa_obiektu.nazwa_właściwości=liczba; -> dla właściwości typu liczbowego<br>
+                    np. <br>
+                    auto.rok=1996;<br>
+                    auto.cena=25000;<br><br>
+
+                <b>Sposób 2:</b><br>
+                    używając zapisu postaci:<br>
+                    nazwa_obiektu[nazwa_właściwości];<br>
+                    np. auto[cena]=25000;
+
+            <h1><li>W jaki sposób można odwołać się do pól (właściwości) i metod?</li></h1>
+                Do właściwości i metod można się odwołać podobnie jak do zwykłych zmiennych
+                i funkcji, trzeba tylko przed ich nazwą umieścić nazwę obiektu, którego są elementami
+                (np. zmienną, która przechowuje dany obiekt), i kropkę.<br><br>
+
+                np. console.log(samochod1.kolor); -> wyświetla kolor obiektu samochod
+            <h1><li>Wymień cechy charakterystyczne konstruktora.</li></h1>
                 <ul>
-                    <li>obiektów (obiekty powoływane są do życia wirtualnego przez programistę, mogą być kasowane przez programistę) np. okienka w Windowsokienko jest obiektem</li>
-                    <li>obiekt ma jakiś stan (czyli dane, w programowaniu obiektowym nazywane najczęściej polami) np. wielość okienka w Windows</li>
-                    <li>obiekt wykazuje pewne zachowanie (czyli posiada pewne procedury w programowaniu obiektowym nazywane metody). Np. jest zdefiniowana metoda do zmiany wielkości okienka.</li>
+                    <li>jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na rzecz tego obiektu</li>
+                    <li>nazywa się tak samo jak klasa</li>
+                    <li>nie zwraca żadnej wartości</li>
+                    <li>może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do życia obiekt za pomocą operatora <b>new</b>.</li>
                 </ul>
-                <br>
-                Czyli obiektowy program komputerowy wyrażony jest jako zbiór takich obiektów, komunikujących się pomiędzy sobą w celu wykonywania zadań
-            <h1><li>Dlaczego stosujemy programowanie obiektowe?</li></h1>
-                <ul>
-                    <li>Jest to bardziej naturalne podejście przez programistę podczas tworzenia programów ponieważ otaczający nas świat to różnego rodzaju przedmioty. Tworząc program komputerowy dokonujemy pewnego ich odwzorowania rzeczywistości np. definiujemy obiekt samochód. Definiujemy pola czyli jego stan np. rok produkcji, marka, kolor. Definiujemy również metody czyli co umie np. hamowanie, przyśpieszanie. Definicja obiektu jego metod i pól znajduje się w klasie. Następnie na podstawie zdefiniowanego obiektu (może mieć pola oraz metody) powołujemy obiekt w pamięci wirtualnej.</li>
-                    <li>Programowanie obiektowe pozwala na lepsze gospodarowanie pamięciom komputera, ponieważ gdy obiekt staje się zbędny możemy go usunąć co zwolni pamięć zajmowaną przez ten obiekt. W programowaniu strukturalnym aby zwalniać pamięć konieczne było stosowanie dynamicznych struktur danych np. stos czy kolejka.</li>
-                    <li>W programowaniu obiektowym dobrze napisana i przetestowana klasa pozwala na stosowaniu przez innych programistów. Zaoszczędza to czas i środki pieniężne.</li>
-                </ul>
-            <h1><li>Omów następujące pojęcia ( w krótkiej formie)</li></h1>
-            <ol>
-                <h2><li>Klasa:</li></h2>
-                    Klasa rodzaj foremki, która opisuje nam jak będą wyglądać tworzone na jej podstawie nowe obiekty. Klasa jest to złożony typ będący opisem (definicją) obiektu/obiektów wraz z definicją pól i metod obiektów.
-                <h2><li>Obiekt:</li></h2>
-                    Instancja (byt, twór) który powstał na podstawie klasy. Czyli Obiekty są konstrukcjami programistycznymi mającymi tak zwane właściwości (inaczej pola obiektu), którymi mogą być zmienne lub inne obiekty. Z obiektami powiązane są funkcje wykonujące operacje na ich właściwościach, nazywane metodami.
-                <h2><li>Własność:</li></h2>
-                    Własność obiektu, np. kolor.
-                <h2><li>Metoda:</li></h2>
-                    Zdolność (czynność) którą umie wykonywać obiekt, np. chodzenie (idź). Realizowane w postaci konstrukcji podobnej do funkcji.
-                <h2><li>Konstruktor:</li></h2>
-                    Metoda wywoływana w momencie inicjalizacji obiektu. np. tworzymy obiekt a wraz z tworzeniem obiektu uruchomi się metoda, która nada np. Imię i Nazwisko.
-                <h2><li>Dziedziczenie:</li></h2>
-                    Klasa może dziedziczyć własności od innej klasy. Tworzymy klasę na podstawie innej klasy pobierając od „rodzica” właściwości i metody, może dopisać nowe pola i nowe metody.
-                <h2><li>Hermetyzacja:</li></h2>
-                    Wewnątrz ciała klasy znajdują się pola i metody. Część pól i metod można odpowiednio ukryć przed "zewnętrznym światem" klasy tak jak to ma miejsce z przedmiotami ze świata rzeczywistego.
-                <h2><li>Polimorfizm:</li></h2>
-                    Polimorfizm czyli wielopastaciowość. Oznacza to, że dany obiekt może zmieniać swoją postać w zależności od potrzeb. Może to być realizowane w formie metody wywoływanej z różną ilością parametrów. Tak więc utorzony obiekt może być traktowany polimorficznie bo zachowuje się różnie w zależności od sposobu uruchamiania jego metody.
-            </ol>
-        </ul>
-        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rrezmer()"/>
+            <h1><li>Konstruowanie obiektu na podstawie przykładu -> obiekt ma trzy pola oraz jedną metodę.</li></h1>
+                <textarea rows="10" cols="100" style="overflow:hidden" readonly>
+var osoba_1 =
+{
+    {
+        nazwisko : ‘Kowalski’,
+        imie :’Jan’,
+        zawod :’piekarz’,
+        wyświetl :function ()
+    {
+    Document.write(this.nazwisko + ‘ ‘ + this.imie)
+}
+                </textarea>
+            <h1><li>Znaczenie słowa <b>this</b>. Jak oddzielamy pola oraz metody?</li></h1>
+                Słowo kluczowe <b>this</b> -> pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiekt.<br><br>
+                Metody i pola muszą być odzielne przecinkami w obrębie jednego obiektu.
+            <h1><li>Konstruktor w JS na podstawie przykładu wraz z opisem.</li></h1>
+                Zostanie utworzony konstruktor o nazwie klient z właściwościami nazwisko, imie, zawod oraz metodą wypisz(). Właściwościom obiektu zostały przypisane wartości parametrów. Użyte słowo kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do odpowiedniego pola tego obiektu.
+                <textarea rows="11" cols="100" style="overflow:hidden" readonly>
+function klient(nazwisko_k,imie_k,zawod_k)
+    {
+        this.nazwisko=nazwisko_k;
+        this.imie=imie_k;
+        this.zawod=zawod_k;
+
+        wypisz = function ()
+        {
+            alert(this.nazwisko + ' ' + this.imie)
+        }
+    }
+                </textarea>
+            <h1><li>Znaczenie słowa kluczowego <b>New</b> wraz z przykładem.</li></h1>
+                Do utworzenia nowego obiektu na podstawie konstruktora stosowane jest słowo kluczowe new.<br><br>
+                Przykład:<br>
+                var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');<br>
+                var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');<br><br>
+                Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient.
+            <h1><li>Znaczenie słowa kluczowego <b>prototype</b> wraz z przykładem i opisem</li></h1>
+                Do definowania metod i właściwości dla obiektu jest wykorzystana właściwości <b>prototype</b>.
+                <br><br>
+                Przykład:<br>
+                <textarea rows="12" cols="100" style="overflow:hidden" readonly>
+function klient()
+    {
+        this.nazwisko='Bielski';
+        this.imie='Paweł';
+    }
+klient.prototype.pisz_dane = function ()
+    {
+        document.write(this.nazwisko + ' ' + this.imie)
+    }
+klient.prototype.zawod = 'kierowca';
+var osoba1 = new klient();
+osoba1.pisz_dane();
+                </textarea><br><br>
+                W definicji konstruktora nie zostały zadeklarowane żadne metody i właściwości. Dopiero po użyciu właściwości prototype została dodana metoda pisz_dane oraz właściwość zawod. Od tej pory każdy nowo tworzony obiekt na podstawie konstruktora klient będzie posiadał tę dodatkową właściwość i metodę.
+        </ol>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rezmer()"/>
     </body>
 </html>
