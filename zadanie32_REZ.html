@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            function komputer(procesor2,karta_graficzna2,ram2)//początek konstruktora
+            {
+                this.procesor=procesor2;
+                this.karta_graficzna=karta_graficzna2;
+                this.ram=ram2;
+            }//koniec konstruktora
+
+            komputer.prototype.wyswietl = function () //definicja metody
+            {
+                alert("Procesor: " + this.procesor + " Karta graficzna: " + this.karta_graficzna + " RAM: " + this.ram);
+            }
+
+            var komputer1 = new komputer("Intel I5 12500H,", "RTX 4070,", "32GB"); // nowy obiekt osoba1
+            var komputer2 = new komputer('AMD Ryzen 7 5800X,', 'RTX 4080,', '64GB');
+
+            komputer1.wyswietl(); // uruchomienie metody wypisz() dotyczącej osoby 1
+            komputer2.wyswietl();
+            document.write("Opis komputerów:"+"<br>");
+
+            // poniżej dostęp do pól osoby1
+            document.write("Pierwszy komputer"+" "+komputer1.procesor+" "+komputer1.karta_graficzna+" "+komputer1.ram + "<br>");
+            document.write("Drugi komputer"+" "+komputer2.procesor+" "+komputer2.karta_graficzna+" "+komputer2.ram);
+        </script>
+        <script>
+            function okno_zamknij_Rezmer()
+            {
+            window.close()
+            }
+        </script>
+    </head>
+    <body>
+        <br>
+        programowanie obiektowe<br><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rezmer()"/>
+    </body>
+</html>
 
