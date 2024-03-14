@@ -1,1 +1,42 @@
 
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var komputer = 
+            {
+                procesor: '3.5GHz',
+                karta_graficzna: '1,3GHz',
+                ram: '3600MHz',
+                komputer_wyswietl_Rezmer: function ()
+                {
+                    document.write("Taktowanie procesora: " + this.procesor + "<br>" + "Taktowanie karty graficznej: " + this.karta_graficzna + "<br> Taktowanie pamięci RAM: " + this.ram)
+                }
+            }
+            komputer.komputer_wyswietl_Rezmer();
+	        komputer.dysk=512;
+	        komputer.komputer_napisz_Rezmer=function() {alert('Dysk: ' + this.dysk + ' GB')}
+	        komputer.komputer_napisz_Rezmer();
+        </script>
+        <script>
+            function okno_zamknij_Rezmer()
+            {
+            window.close()
+            }
+        </script>
+    </head>
+    <body>
+        <br><br>
+        Programowanie obiektowe. <br>
+        Obiekt to komputer<br>
+        Pola:<br>
+        procesor<br>
+        karta_graficzna<br>
+        ram<br>
+        metoda: komputer_wyswietl_Rezmer<br>
+	    nowe pole to dysk<br>
+	    nowa metoda to komputer_napisz_Rezmer();<br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rezmer()"/>
+    </body>
+</html>
