@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function okno_zamknij_Rezmer()
+            {
+                window.close()
+            }
+        </script>
+    </head>
+    <body>
+        HTML:<br>
+        <textarea rows="38" cols="125" style="overflow:hidden" readonly>
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function okno_zamknij_Rezmer()
+            {
+                window.close()
+            }
+        </script>
+    </head>
+    <body>
+        <b>
+        <p style="color: green;">MENU</p>
+        <br>
+        <p style="color: red;">1-czerwony</p>
+        <p style="color: blue;">2-niebieski</p>
+        </b>
+        <input type="button" name="nazwisko_ucznia" value="Oblicz" onclick="fun_REZ()" />
+        <script>
+            function fun_REZ() {
+                var x_REZ = prompt("Podaj kolor", "");
+                if(x_REZ == 1 || x_REZ.toLowerCase() == "czerwony") {
+                    document.write('<h1 style="color: red;">wczytałeś kolor czerwony</h1><br />');
+                    document.write("<input type='button' value='zamknij okno' onclick='okno_zamknij_Rezmer()'/>")
+                }
+                else if(x_REZ == 2 || x_REZ.toLowerCase() == "niebieski") {
+                    document.write('<h6 style="color: blue;">wczytałeś kolor niebieski</h6><br />');
+                    document.write("<input type='button' value='zamknij okno' onclick='okno_zamknij_Rezmer()'/>")
+                }
+            }
+        </script>
+        <br><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rezmer()"/>
+    </body>
+</html>
+        </textarea>
+        <br><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rezmer()"/>
+    </body>
+</html>
