@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function okno_zamknij_Rezmer()
+            {
+            window.close()
+            }
+        </script>
+    </head>
+    <body>
+        HTML:<br>
+        <textarea rows="24" cols="110" style="overflow:hidden" readonly>
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function okno_zamknij_Rezmer()
+            {
+            window.close()
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var x = prompt("Podaj liczbę ");
+            if(x%2==0){
+                document.write("<span style='color: red; font-size: 3mm'>Liczba jest parzysta</span><br>");
+            }else{
+                document.write("<span style='color: silver; font-size: 5mm'>Liczba jest nieparzysta</span>");
+            }
+        </script>
+        <br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rezmer()"/>
+    </body>
+</html>
+        </textarea>
+        <br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rezmer()"/>
+    </body>
+</html>
