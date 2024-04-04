@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-color: silver;
+            }
+        </style>
+        <script>
+            function okno_zamknij_Rezmer()
+            {
+                window.close()
+            }
+            var imie = "Mateusz";
+            var nazwisko = "Rezmer";
+            var liczba1 = 5;
+            var liczba2 = 12;
+            var liczba3 = 8;
+            var liczba4 = 12;
+            var opcja_REZ = prompt("Podaj opcję: ")
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write ("<p style=\"font-size: 42px; color: green;\">Moje nazwisko to:" + " " + imie + " " + nazwisko + "<br></p>");
+            document.write ("<p style=\"font-size: 42px; color: green;\">liczba1 = " + liczba1 + "<br></p>");
+            document.write ("<p style=\"font-size: 42px; color: green;\">liczba2 = 5 + 7 = " + liczba2 + "<br></p>");
+            document.write ("<p style=\"font-size: 42px; color: green;\">liczba3 = " + liczba3 + "<br></p>");
+            document.write ("<p style=\"font-size: 42px; color: green;\">liczba4 = 8 + 4 = " + liczba4 + "<br></p>");
+        </script>
+        <font style="color: red; font-size: 42px;">----------MENU----------</font>
+        <script>
+            document.write ("<p style=\"font-size: 42px; color: red;\">5-wyświetlanie teorii o operatorach" + "<br></p>");
+            document.write ("<p style=\"font-size: 42px; color: red;\">28-czy liczba należy do przedziału (" + liczba1 + ";" + liczba2 +"]<br></p>");
+            document.write ("<p style=\"font-size: 42px; color: red;\">51-czy liczba należy do przedziału (" + "-oo; " + liczba3 + ") lub [" + liczba4 +"; +oo)<br></p>");
+        </script>
+        <script>
+            if (opcja_REZ==5)
+                {
+                    document.write("<font color=green size=7>Jesteś w opcji 5--> teoria</font>"+"<br>");
+                    document.write("<font color=blue size=5>&& i x=3 y=4 (x < 9 && y > 2) wynik --> prawda</font>"+"<br>"+"<font color=blue size=5>|| lub x=3 y=4 (x==8 || y==6) wynik --> fałsz</font>"+"<br>"+"<font color=blue size=5>! zaprzeczenie x=3 y=4 !(x==y) wynik --> prawda</font>")
+                }
+                else
+                {
+                    if (opcja_REZ==28)
+                    {
+                        document.write("<font color=green size=7>Jesteś w opcji 28--> przedział</font>"+"<br>");
+                        var x = prompt("Podaj liczbę: ")
+                        if(x>5&&x<13){
+                            document.write("<font color=green size=6>liczba należy do przedziału</font>")
+                        }else{
+                            document.write("<font color=green size=6>liczba nie należy do przedziału</font>")
+                        }
+                    }
+                    else
+                    {
+                        if(opcja_REZ==51)
+                        {
+                            document.write("<font color=green size=7>Jesteś w opcji 51--> przedział lub</font>"+"<br>");
+                            var y = prompt("Podaj liczbę: ")
+                            if(y<8 || y>11){
+                                document.write("<font color=green size=6>liczba należy do przedziału</font>")
+                            }else{
+                                document.write("<font color=green size=6>liczba nie należy do przedziału</font>")
+                            }
+
+                        }
+                        else
+                        {
+                            document.write("<font color=red size=7>nie ma takiej opcji</font>"+"<br>");
+                        }
+                    }
+                }
+        </script>
+        <br><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rezmer()"/>
+    </body>
+</html>
