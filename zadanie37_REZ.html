@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function okno_zamknij_Rezmer()
+            {
+                window.close()
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var rok_REZ = prompt("Podaj rok od którego używany jest JavaScript");
+            if(rok_REZ==1995){
+                document.write("<p style='color: blue; font-size: 4mm'>Brawo znasz rok od kiedy działa Javasript</p>");
+            }else{
+                document.write("<p style='color: red; font-size: 7mm'>Źle, musisz jeszcze poczytać</p>");
+            }
+            document.write("Wpisany rok: "+rok_REZ);
+        </script>
+        <br><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Rezmer()"/>
+    </body>
+</html>
